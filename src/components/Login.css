@@ -1,0 +1,89 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #eef2f3, #dfe9f3);
+}
+
+.login-card {
+  width: 360px;
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  color: #2e7d32;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.tabs span {
+  cursor: pointer;
+  font-weight: 600;
+  color: #999;
+}
+
+.tabs .active {
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+  padding-bottom: 4px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  opacity: .9;
+}
+
+/* CENTER FORGOT PASSWORD */
+.links {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.links span {
+  cursor: pointer;
+  color: #2e7d32;
+  font-size: 14px;
+}
+
+.small {
+  margin-top: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #2e7d32;
+}
+
+.demo {
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+}
