@@ -1,170 +1,217 @@
-/* FULL SCREEN & GENERAL RESET */
+/* ===============================
+   GLOBAL RESET
+=================================*/
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f6f8fb;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f6f8fb, #e9f2ec);
+  scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* ===============================
+   NAVBAR (GLASS EFFECT)
+=================================*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background-color: rgba(255,255,255,0.9);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 18px 60px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar .logo {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 26px;
+  font-weight: 700;
   color: #2e7d32;
+  letter-spacing: 1px;
 }
 
 .nav-links a {
   margin-left: 25px;
   text-decoration: none;
-  color: #333;
+  color: #222;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #2e7d32;
+  transform: translateY(-2px);
 }
 
-/* HERO SECTION */
+/* ===============================
+   HERO SECTION
+=================================*/
 .hero {
-  height: 100vh; /* full viewport height */
-  width: 100vw;  /* full viewport width */
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-              url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-  background-size: cover;
-  background-position: center;
+
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+              url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80")
+              center/cover no-repeat;
 }
 
-
-
+/* Fade animation */
 .hero-content {
   text-align: center;
-  color: #fff;
+  color: white;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .hero-content h1 {
-  font-size: 64px;
+  font-size: 72px;
+  font-weight: bold;
   margin-bottom: 15px;
+  letter-spacing: 2px;
 }
 
 .hero-content p {
-  font-size: 24px;
-  margin-bottom: 25px;
+  font-size: 26px;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
 
+/* Buttons */
 .hero-buttons button {
-  margin: 0 10px;
-  padding: 14px 28px;
+  margin: 10px;
+  padding: 14px 32px;
   font-size: 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-
-.primary-btn {
-  background-color: #2e7d32;
-  color: #fff;
+  border-radius: 50px;
   border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.secondary-btn {
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+/* Primary */
+.primary-btn {
+  background: #2e7d32;
+  color: white;
 }
 
 .primary-btn:hover {
-  opacity: 0.85;
+  background: #1b5e20;
+  transform: scale(1.08);
+}
+
+/* Secondary */
+.secondary-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
 }
 
 .secondary-btn:hover {
-  background: #fff;
+  background: white;
   color: #2e7d32;
+  transform: scale(1.08);
 }
 
-/* FEATURES SECTION */
+/* ===============================
+   FEATURES SECTION
+=================================*/
 .features {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 60px 20px;
+  gap: 40px;
+  padding: 80px 20px;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #fff;
-  padding: 30px;
-  width: 250px;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  width: 270px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .card h3 {
-  margin: 15px 0 10px;
+  margin: 15px 0;
+  font-size: 20px;
 }
 
 .card p {
   font-size: 14px;
-  color: #666;
+  color: #555;
 }
 
 .emoji {
-  font-size: 40px;
+  font-size: 42px;
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+=================================*/
 footer {
   text-align: center;
-  padding: 20px;
-  background: #f6f8fb;
+  padding: 25px;
+  background: #ffffff;
   font-weight: 500;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
 }
 
-/* RESPONSIVE DESIGN */
+/* ===============================
+   ANIMATION
+=================================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
 @media (max-width: 768px) {
+
   .hero-content h1 {
-    font-size: 48px;
+    font-size: 42px;
   }
+
   .hero-content p {
-    font-size: 20px;
+    font-size: 18px;
   }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .features {
     flex-direction: column;
     align-items: center;
   }
+
   .card {
-    width: 80%;
-  }
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links a {
-    margin: 5px 0;
+    width: 85%;
   }
 }
