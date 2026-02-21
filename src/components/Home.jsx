@@ -3,6 +3,23 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+    useEffect(() => {
+    const cards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show-card");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+  }, []);
   return (
     <>
       <nav className="navbar">
