@@ -1,9 +1,12 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./components/Home";
+import Login from "./components/Login";
+import Restaurants from "./components/Restaurants";
 
-// Temporary placeholder for Login so the route won't crash
-function Login() {
-  return <h2 style={{ textAlign: "center", marginTop: "50px" }}>Login Page</h2>;
+function RestaurantsWrapper() {
+  const navigate = useNavigate();
+
+  return <Restaurants onBack={() => navigate(-1)} />;
 }
 
 export default function App() {
@@ -11,6 +14,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/restaurants" element={<RestaurantsWrapper />} />
     </Routes>
   );
 }

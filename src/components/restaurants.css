@@ -7,13 +7,9 @@
 
 /* NAVBAR */
 .navbar {
-  background: #15803d;
-  color: white;
-  padding: 14px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
+  background: white;
+  color: #14532d;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {

@@ -8,7 +8,7 @@ export default function Home() {
         <h2 className="logo">Grass & Grain</h2>
 
         <div className="nav-links">
-          <a href="#">Restaurants</a>
+          <Link to="/restaurants">Restaurants</Link>
           <a href="#">Turf</a>
 
           <Link to="/login">Login</Link>
