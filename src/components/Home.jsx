@@ -18,7 +18,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1>Grass & Grain</h1>
-          <p>Eat • Book • Play</p>
+          <p>Where Matches Meet Meals.</p>
 
           <div className="hero-buttons">
             <button className="primary-btn">Find Restaurants</button>
